@@ -5,7 +5,7 @@ const CACHE_NAME = 'static-cache-v1';
 
 // Add list of files to cache here.
 const FILES_TO_CACHE = [
-  '/offline.html', '/index.html',
+  '/offline.html', '/index.html', '/bundle.js.map', '/bundle.js', '/bundle.css', '/bundle.css,map', '/build/bundle.js.map', '/build/bundle.js', '/build/bundle.css', '/build/bundle.css.map'
 ];
 
 self.addEventListener('install', (evt) => {
@@ -50,7 +50,7 @@ self.addEventListener('fetch', (evt) => {
           .catch(() => {
             return caches.open(CACHE_NAME)
                 .then((cache) => {
-                  return cache.match('offline.html');
+                  return cache.match('index.html');
                 });
           })
   );

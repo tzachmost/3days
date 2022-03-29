@@ -16,6 +16,7 @@
     margin-bottom: 8px;
   }
   input {
+    width: 100%;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     border-radius: 8px;
